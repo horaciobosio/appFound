@@ -6,14 +6,14 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace appFound
+namespace appFund
 {
     public class DalFunding
     {
         public IEnumerable<Funding> GetAsync()
         {
            
-            string jsonString = File.ReadAllText("../appFound/MockData/MockDataFunding.json");
+            string jsonString = File.ReadAllText("../appFund/MockData/MockDataFunding.json");
 
             return JsonSerializer.Deserialize<IEnumerable<Funding>>(jsonString);
         }

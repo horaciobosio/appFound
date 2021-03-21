@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace appFound
+namespace appFund
 {
    public class Funding
     {

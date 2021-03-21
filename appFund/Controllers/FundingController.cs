@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace appFound.Controllers
+namespace appFund.Controllers
 {
     [ApiController]
     [Route("[controller]")]
