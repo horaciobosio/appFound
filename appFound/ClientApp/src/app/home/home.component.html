@@ -1,0 +1,32 @@
+<h1 id="tableLabel">Fundings List</h1>
+
+<p *ngIf="!fundings"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="fundings">
+  <thead>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Id</th>
+      <th>Summary</th>
+      <th>Amount</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let funding of fundings">
+      <td>{{ funding.startDate }}</td>
+      <td>{{ funding.endDate }}</td>
+      <td>{{ funding.id }}</td>
+      <td>{{ funding.summary }}</td>
+      <td>{{ funding.amount }}</td>
+      <td><button class="btn btn-primary" (click)="applyFunding(funding.id)">Apply</button></td>
+      <td><button class="btn btn-primary" (click)="withDrawFunding(funding.id)">WithDraw</button></td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<p *ngIf="duplicateInvestment">Sorry, you already invested {{amountinvested}} on this investment</p>
+<p *ngIf="withDrawInvestment">You received {{amountinvested}} from this investment </p>
+
